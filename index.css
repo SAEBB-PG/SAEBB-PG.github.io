@@ -1,0 +1,130 @@
+body {
+	background-color: #d400ff46;
+	font-family: Arial, sans-serif;
+	text-align: center;
+  }
+  
+h1 {
+	color: #333;
+  }
+  
+button {
+	margin-top: 20px;
+	padding: 10px 20px;
+	background-color: #4caf50;
+	color: #000000;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  
+button:hover {
+	background-color: #74ff7a;
+  }
+  
+button:active {
+	background-color: #3c903c;
+  }
+  
+.checkbox-group {
+	  margin-bottom: 10px;
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	}
+
+.icone {
+	margin-right: 95%;
+}
+
+.icone a:hover{
+	color: antiquewhite;
+}
+
+.menu {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #64d3ff;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	}
+	
+.menu a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #ff4242;
+	display: block;
+	transition: 0.3s;
+	}
+	
+.menu a:hover {
+	color: #ffb9b9;
+	}
+	
+.menu .btnFechar {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+	}
+	
+@media screen and (max-height: 450px) {
+	.menu {padding-top: 15px;}
+	.menu a {font-size: 18px;}
+	}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+	body {
+		font-size: 30px;
+	}
+	button {
+		font-size: 30px;
+	}
+	.menu {
+		font-size: 50px;
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+	body {
+		font-size: 20px;
+	}
+	button {
+		font-size: 15px;
+	}
+	.menu {
+		font-size: 30px;
+	}
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	border: 1px solid #ddd;
+  }
+
+  th, td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: center;
+  }
+
+  .group-checkbox {
+    text-align: left; 
+  }
+
+  .group-checkbox label {
+    display: block;
+    margin-bottom: 5px;
+	margin-left: 5px;
+  }
+
