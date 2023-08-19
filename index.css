@@ -1,5 +1,7 @@
 body {
-	background-color: #d400ff46;
+	background-image: url('backgroundSAEBB.png');
+	background-size: 100%;
+	background-attachment: fixed;
 	font-family: Arial, sans-serif;
 	text-align: center;
   }
@@ -78,12 +80,16 @@ button:active {
 @media screen and (max-height: 450px) {
 	.menu {padding-top: 15px;}
 	.menu a {font-size: 18px;}
+	body {
+		background-size: initial;
+	}
 	}
 
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
 	body {
 		font-size: 30px;
+		background-size: initial;
 	}
 	button {
 		font-size: 30px;
@@ -97,6 +103,7 @@ button:active {
 @media screen and (min-width: 992px) {
 	body {
 		font-size: 20px;
+		background-size: initial;
 	}
 	button {
 		font-size: 15px;
