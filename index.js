@@ -30,7 +30,7 @@ function evitaConflito() {
               var selectedEnd = parseInt(selectedCheckbox.getAttribute('end'));
 
               if (currentStart >= selectedEnd || currentEnd <= selectedStart) {
-                console.log("Checkbox " + checkbox.id + " tem o mesmo valor de start e end que a checkbox " + selectedCheckbox.id);
+                console.log("");
               } else {
                 canAddAtividade = false;
               }
@@ -39,12 +39,12 @@ function evitaConflito() {
 
           if (canAddAtividade) {
             selectedAtividades.push(checkbox.getAttribute('atividade'));
-            console.log("Checkbox " + checkbox.id + " adicionada à lista de nomes.");
+            console.log("A atividade " + atividade + " foi adicionada à lista de nomes.");
             atualizarTabela(checkbox);
           } else {
               this.checked = false;
               var atividade = checkbox.getAttribute("atividade");
-              console.log("Checkbox " + checkbox.id + " não foi adicionada à lista de nomes.");
+              console.log("A atividade " + atividade + " não foi adicionada à lista de nomes.");
               alert("Conflito de horário. A atividade: " + atividade + " não pôde ser adicionada.");
 
           }
@@ -82,29 +82,6 @@ function evitaConflito() {
   }
 
 }
-
-function updateLimit() {
-  let cbs = document.querySelectorAll('input[type="checkbox"]');
-  let limite = 0;
-
-  cbs.forEach(checkbox => {
-    if (checkbox.checked) {
-      limite += parseInt(checkbox.getAttribute('cont'));
-    }
-  });
-
-  if (limite > 3 && !alertShown) {
-    alertShown = true;
-    alert('Limite de atividades pagas excedido! Limite: ' + limite);
-  }
-}
-
-// Adiciona um EventListener a cada checkbox
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-    checkbox.addEventListener('change', updateLimit);
-  });
-});
 
 document.addEventListener('DOMContentLoaded', evitaConflito);
 function gerar() {
